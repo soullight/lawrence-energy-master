@@ -114,6 +114,12 @@
   .capform input:focus{outline:none;border-color:var(--gold)}
   .capform button{border:none;cursor:pointer}
   #capmsg,#inqmsg{margin-top:16px;color:var(--gold-2);font-size:14px;min-height:18px}
+  /* for-the-few box */
+  .fewbox{display:grid;grid-template-columns:.82fr 1.18fr;border:1px solid var(--gold);border-radius:20px;overflow:hidden;background:linear-gradient(135deg,#1a1611,#0c0b0a)}
+  .fewbox>img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+  .fewcopy{padding:52px 46px}
+  .fewcopy .capform{margin:0}
+  @media(max-width:820px){.fewbox{grid-template-columns:1fr}.fewbox>img{max-height:440px;object-position:center 22%}.fewcopy{padding:36px 26px}}
   @media(max-width:560px){.capform{flex-direction:column;border-radius:16px}.capform input,.capform button{border-radius:12px}}
 
   /* work */
@@ -286,15 +292,18 @@
 
 <section class="pad" id="inquire" style="padding-top:0">
   <div class="wrap">
-    <div class="capture" style="border-color:rgba(244,239,230,.18)">
-      <div class="eyebrow">Private inquiry</div>
-      <h2 style="margin-top:14px">For the few.</h2>
-      <p>Private, one-on-one work with Lawrence is by application only. Tell us who you are and what you're after — if it's a fit, we'll reach out.</p>
-      <form class="capform" id="inqform">
-        <input type="email" id="inqemail" placeholder="your@email.com" required>
-        <button type="submit" class="btn btn-ghost" style="border-color:var(--gold);color:var(--gold-2)">Request an invitation</button>
-      </form>
-      <div id="inqmsg"></div>
+    <div class="fewbox">
+      <img src="img/for-the-few.jpg" alt="For the few — private work with Lawrence">
+      <div class="fewcopy">
+        <div class="eyebrow">Private inquiry</div>
+        <h2 style="margin:14px 0">For the few.</h2>
+        <p style="color:var(--muted);font-size:17px;margin-bottom:24px">Private, one-on-one work with Lawrence is by application only — for the man or woman who already knows it's time. Tell us who you are and what you're after; if it's a fit, we'll reach out.</p>
+        <form class="capform" id="inqform">
+          <input type="email" id="inqemail" placeholder="your@email.com" required>
+          <button type="submit" class="btn btn-ghost" style="border-color:var(--gold);color:var(--gold-2)">Request an invitation</button>
+        </form>
+        <div id="inqmsg"></div>
+      </div>
     </div>
   </div>
 </section>
