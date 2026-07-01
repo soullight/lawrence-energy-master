@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lawrence Lanoff — The Energy Master</title>
+<meta name="description" content="Lawrence Lanoff — Tantric Master, Clarity Coach, and best-selling author. Body-positive, street-wise wisdom that deprograms the myths we're handed about sex, spirituality, and money.">
+<meta property="og:title" content="Lawrence Lanoff — The Energy Master">
+<meta property="og:description" content="Body-positive, street-wise wisdom. Get clear about sex, spirituality, and money.">
+<meta property="og:image" content="img/hero.webp">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold:#c9a25a; --gold-2:#e6c887; --ink:#0c0b0a; --ink-2:#141210; --paper:#f4efe6;
+    --muted:#9a9088; --line:rgba(201,162,90,.22);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--paper);font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.display{font-family:Anton,Inter,sans-serif;font-weight:400;letter-spacing:.01em;line-height:.98;text-transform:uppercase}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .gold{color:var(--gold-2)}
+  .eyebrow{font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:600}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:50;background:rgba(12,11,10,.72);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{font-family:Anton;font-size:20px;letter-spacing:.06em}
+  .brand span{color:var(--gold)}
+  .navlinks{display:flex;gap:30px;font-size:14px;font-weight:500;letter-spacing:.04em}
+  .navlinks a{color:var(--muted);transition:color .2s}
+  .navlinks a:hover{color:var(--gold-2)}
+  .navcta{border:1px solid var(--gold);color:var(--gold-2)!important;padding:9px 18px;border-radius:100px;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+  .navcta:hover{background:var(--gold);color:var(--ink)!important}
+  @media(max-width:820px){.navlinks{display:none}}
+
+  /* hero */
+  .hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background:url('img/hero.webp') center 22%/cover no-repeat;filter:grayscale(.25) contrast(1.02)}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:
+     linear-gradient(180deg,rgba(12,11,10,.55) 0%,rgba(12,11,10,.35) 40%,rgba(12,11,10,.92) 100%),
+     linear-gradient(90deg,rgba(12,11,10,.85) 0%,rgba(12,11,10,.25) 70%)}
+  .hero .wrap{position:relative;z-index:2;padding-top:60px;padding-bottom:60px}
+  .hero h1{font-size:clamp(52px,10vw,132px);text-shadow:0 4px 40px rgba(0,0,0,.5)}
+  .hero h1 .l2{color:var(--gold-2)}
+  .titles{display:flex;flex-wrap:wrap;gap:10px 22px;margin:22px 0 26px;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--paper)}
+  .titles span{position:relative;padding-left:20px}
+  .titles span::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;background:var(--gold);border-radius:50%}
+  .lead{max-width:600px;font-size:19px;color:#e8e1d4}
+  .btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+  .btn{display:inline-block;padding:15px 30px;border-radius:100px;font-weight:600;font-size:15px;letter-spacing:.03em;transition:transform .15s,box-shadow .2s}
+  .btn-gold{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:var(--ink);box-shadow:0 10px 30px rgba(201,162,90,.28)}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(201,162,90,.42)}
+  .btn-ghost{border:1px solid rgba(244,239,230,.3);color:var(--paper)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-2)}
+
+  /* marquee */
+  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink-2);overflow:hidden;padding:16px 0}
+  .marquee-track{display:flex;gap:44px;white-space:nowrap;animation:scroll 32s linear infinite;font-family:Anton;font-size:22px;letter-spacing:.04em;color:var(--muted)}
+  .marquee-track b{color:var(--gold)}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* sections */
+  section.pad{padding:96px 0}
+  .sec-head{max-width:640px;margin-bottom:52px}
+  .sec-head h2{font-size:clamp(34px,5.4vw,58px);margin:14px 0}
+  .sec-head p{color:var(--muted);font-size:17px}
+
+  /* about */
+  .about{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .about img{width:100%;border-radius:14px;filter:grayscale(.15);box-shadow:0 30px 60px rgba(0,0,0,.5)}
+  .about p{margin-bottom:18px;font-size:17px;color:#ded7ca}
+  @media(max-width:820px){.about{grid-template-columns:1fr;gap:34px}}
+
+  /* pillars */
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .pill{border:1px solid var(--line);border-radius:14px;padding:34px 28px;background:linear-gradient(180deg,var(--ink-2),transparent)}
+  .pill .n{font-family:Anton;font-size:15px;color:var(--gold);letter-spacing:.1em}
+  .pill h3{font-size:26px;margin:12px 0 10px}
+  .pill p{color:var(--muted);font-size:15px}
+  @media(max-width:820px){.pillars{grid-template-columns:1fr}}
+
+  /* books */
+  .books{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .book{border:1px solid var(--line);border-radius:14px;padding:32px;background:var(--ink-2);transition:transform .2s,border-color .2s}
+  .book:hover{transform:translateY(-4px);border-color:var(--gold)}
+  .book .tag{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+  .book h3{font-size:24px;margin:14px 0}
+  .book p{color:var(--muted);font-size:15px;margin-bottom:20px}
+  .book a{color:var(--gold-2);font-weight:600;font-size:14px;letter-spacing:.04em}
+  .book a:hover{text-decoration:underline}
+  @media(max-width:820px){.books{grid-template-columns:1fr}}
+
+  /* podcast */
+  .podcast{background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .pod-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+  .pod-eps{display:flex;flex-direction:column;gap:2px}
+  .pod-ep{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+  .pod-ep .num{font-family:Anton;color:var(--gold);font-size:18px;min-width:34px}
+  .pod-ep .t{font-weight:600}
+  .pod-ep .d{color:var(--muted);font-size:14px}
+  @media(max-width:820px){.pod-grid{grid-template-columns:1fr;gap:30px}}
+
+  /* capture */
+  .capture{background:linear-gradient(135deg,#1a1611,#0c0b0a);border:1px solid var(--gold);border-radius:20px;padding:56px 48px;text-align:center}
+  .capture h2{font-size:clamp(30px,4.6vw,48px)}
+  .capture p{color:var(--muted);max-width:520px;margin:16px auto 30px;font-size:17px}
+  .capform{display:flex;gap:12px;max-width:480px;margin:0 auto}
+  .capform input{flex:1;padding:16px 20px;border-radius:100px;border:1px solid rgba(244,239,230,.2);background:rgba(0,0,0,.4);color:var(--paper);font-size:15px}
+  .capform input:focus{outline:none;border-color:var(--gold)}
+  .capform button{border:none;cursor:pointer}
+  #capmsg,#inqmsg{margin-top:16px;color:var(--gold-2);font-size:14px;min-height:18px}
+  @media(max-width:560px){.capform{flex-direction:column;border-radius:16px}.capform input,.capform button{border-radius:12px}}
+
+  /* work */
+  .work{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .work img{width:100%;border-radius:14px;filter:grayscale(.2)}
+  @media(max-width:820px){.work{grid-template-columns:1fr}}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);padding:56px 0 40px;background:var(--ink-2)}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;align-items:center}
+  .foot .brand{font-size:24px}
+  .social{display:flex;gap:22px;font-size:14px;color:var(--muted)}
+  .social a:hover{color:var(--gold-2)}
+  .copy{color:#6a635b;font-size:13px;margin-top:30px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">LAWRENCE<span>·</span>LANOFF</a>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#books">Books</a>
+      <a href="#podcast">Podcast</a>
+      <a href="#meditations">Free Meditations</a>
+    </div>
+    <a class="navcta" href="#meditations">Start Free</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="eyebrow">Tantric Master · Author · Clarity Coach</div>
+    <h1>The Energy<br><span class="l2">Master.</span></h1>
+    <div class="titles">
+      <span>Body-positive</span><span>Street-wise</span><span>No moralizing</span>
+    </div>
+    <p class="lead">Award-winning tantric master and best-selling author Lawrence Lanoff strips away the myths we're handed about <span class="gold">sex, spirituality, and money</span> — so you can get clear, and get free.</p>
+    <div class="btns">
+      <a class="btn btn-gold" href="#meditations">Get the free meditations</a>
+      <a class="btn btn-ghost" href="#books">Read the books</a>
+    </div>
+  </div>
+</header>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <span>CLARITY</span><b>·</b><span>THE YORGASMIC METHOD</span><b>·</b><span>DEPROGRAMMING</span><b>·</b><span>ENERGY</span><b>·</b><span>FREEDOM</span><b>·</b>
+    <span>CLARITY</span><b>·</b><span>THE YORGASMIC METHOD</span><b>·</b><span>DEPROGRAMMING</span><b>·</b><span>ENERGY</span><b>·</b><span>FREEDOM</span><b>·</b>
+  </div>
+</div>
+
+<section class="pad" id="about">
+  <div class="wrap about">
+    <div>
+      <div class="eyebrow">About</div>
+      <h2 style="font-size:clamp(34px,5vw,56px);margin:14px 0 26px">Wisdom you can<br>actually use.</h2>
+      <p>Lawrence is an award-winning tantric master, clarity coach, and best-selling author. He offers body-positive, street-wise wisdom that helps people move ahead in <span class="gold">clarity</span>.</p>
+      <p>He questions the cultural myths about sex, spirituality, and money — and deprograms students from the prisons of societal beliefs, norms, and superstitions.</p>
+      <p>Lawrence is the creator of <em>The Yorgasmic Method</em>, the basis of his book <em>The Future of Sex</em>, and the author of the foundational work <em>A Course in Freedom</em>.</p>
+    </div>
+    <img src="img/about.webp" alt="Lawrence Lanoff">
+  </div>
+</section>
+
+<section class="pad" style="padding-top:0">
+  <div class="wrap">
+    <div class="pillars">
+      <div class="pill"><div class="n">01</div><h3>Sex</h3><p>Not a problem to fix or a shame to carry. A fact of your body to meet, cleanly and without apology.</p></div>
+      <div class="pill"><div class="n">02</div><h3>Spirituality</h3><p>No gurus, no cults, no borrowed mythology. Just seeing clearly what's actually here.</p></div>
+      <div class="pill"><div class="n">03</div><h3>Money</h3><p>The symbol of freedom. Drop the moral story and think clearly about it — and it flows.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="books" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Best-selling books</div>
+      <h2>Read the work.</h2>
+      <p>Decades of teaching, on the page — plain, funny, and free of spiritual preciousness.</p>
+    </div>
+    <div class="books">
+      <div class="book">
+        <div class="tag">Foundational</div>
+        <h3>A Course in Freedom</h3>
+        <p>Tools to see your life more and more clearly — how the perceptual field of your mind works, and how to lighten it up. It's up to you how far down the rabbit hole you go.</p>
+        <a href="https://www.amazon.com/s?k=Lawrence+Lanoff+A+Course+in+Freedom" target="_blank" rel="noopener">Get it on Amazon →</a>
+      </div>
+      <div class="book">
+        <div class="tag">Male sexuality</div>
+        <h3>How To Last Longer In Bed</h3>
+        <p>Ancient tantra secrets on the road to explosive self-pleasure and full-body orgasms — and the real reason so many men finish too fast, or can't finish at all.</p>
+        <a href="https://www.amazon.com/s?k=Lawrence+Lanoff" target="_blank" rel="noopener">Get it on Amazon →</a>
+      </div>
+      <div class="book">
+        <div class="tag">Consciousness</div>
+        <h3>The Prophet's Training Manual</h3>
+        <p>Not a new system and not a channeled sermon — an unwinding. A stripping away of the forms and symbols we hold dear, back to the connection we're already part of.</p>
+        <a href="https://www.amazon.com/s?k=Lawrence+Lanoff+Prophets+Training+Manual" target="_blank" rel="noopener">Get it on Amazon →</a>
+      </div>
+    </div>
+    <div style="margin-top:34px"><a class="btn btn-ghost" href="https://www.amazon.com/s?k=Lawrence+Lanoff" target="_blank" rel="noopener">See the full catalog →</a></div>
+  </div>
+</section>
+
+<section class="pad podcast" id="podcast">
+  <div class="wrap pod-grid">
+    <div>
+      <div class="eyebrow">Podcast</div>
+      <h2 style="font-size:clamp(32px,5vw,54px);margin:14px 0 20px">The Sexually<br>Optimized Mind.</h2>
+      <p style="color:var(--muted);font-size:17px;margin-bottom:28px">A journey into meditation, cults, sexuality, and how we build our view of reality — the perfect listen in a time of fear and chronic stress.</p>
+      <a class="btn btn-gold" href="#meditations">Listen &amp; subscribe</a>
+    </div>
+    <div class="pod-eps">
+      <div class="pod-ep"><div class="num">01</div><div><div class="t">Introduction</div><div class="d">The core ideas of the Optimized Mind — where this journey is going.</div></div></div>
+      <div class="pod-ep"><div class="num">02</div><div><div class="t">Your Symbolic Brain</div><div class="d">How the mind builds symbols — and how that shapes everything you feel.</div></div></div>
+      <div class="pod-ep"><div class="num">03</div><div><div class="t">With Mark Cunningham</div><div class="d">The renegade hypnotist on healing, sexuality, and feeling amazing.</div></div></div>
+      <div class="pod-ep"><div class="num">28</div><div><div class="t">+ 25 more episodes</div><div class="d">The full series, free.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="meditations">
+  <div class="wrap">
+    <div class="capture">
+      <div class="eyebrow">Free meditations</div>
+      <h2 style="margin-top:14px">Start with your body.</h2>
+      <p>Free guided meditations to develop your energy, your sexuality, and your relationships. Drop your email — they're yours.</p>
+      <form class="capform" id="capform">
+        <input type="email" id="capemail" placeholder="your@email.com" required>
+        <button type="submit" class="btn btn-gold">Send them to me</button>
+      </form>
+      <div id="capmsg"></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad work" style="padding-top:0">
+  <div class="wrap work">
+    <img src="img/hands.webp" alt="Lawrence Lanoff teaching">
+    <div>
+      <div class="eyebrow">Private coaching · by invitation</div>
+      <h2 style="font-size:clamp(30px,4.6vw,50px);margin:14px 0 20px">Work with Lawrence.</h2>
+      <p style="color:#ded7ca;font-size:17px;margin-bottom:16px">Each year Lawrence takes on a small handful of private clients for the deepest, most immersive level of the work — total discretion, complete immersion, one-on-one.</p>
+      <p style="color:var(--muted);font-size:16px;margin-bottom:26px">It's the highest tier, it's six-figure, and it isn't for everyone. If you already know it's for you, reach out privately.</p>
+      <a class="btn btn-gold" href="#inquire">Inquire privately</a>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="inquire" style="padding-top:0">
+  <div class="wrap">
+    <div class="capture" style="border-color:rgba(244,239,230,.18)">
+      <div class="eyebrow">Private inquiry</div>
+      <h2 style="margin-top:14px">For the few.</h2>
+      <p>Private, one-on-one work with Lawrence is by application only. Tell us who you are and what you're after — if it's a fit, we'll reach out.</p>
+      <form class="capform" id="inqform">
+        <input type="email" id="inqemail" placeholder="your@email.com" required>
+        <button type="submit" class="btn btn-ghost" style="border-color:var(--gold);color:var(--gold-2)">Request an invitation</button>
+      </form>
+      <div id="inqmsg"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="#top">LAWRENCE<span style="color:var(--gold)">·</span>LANOFF</a>
+      <div class="social">
+        <a href="https://instagram.com/lawrencetheenergymaster" target="_blank" rel="noopener">Instagram</a>
+        <a href="#books">Books</a>
+        <a href="#podcast">Podcast</a>
+        <a href="#meditations">Free Meditations</a>
+      </div>
+    </div>
+    <div class="copy">© 2026 Lawrence Lanoff. All rights reserved. · The Energy Master</div>
+  </div>
+</footer>
+
+<script>
+  // Email capture — wired to the shared subscriber list on cutover.
+  // For the test build it validates + confirms; endpoint swaps in when the domain moves to Cloudflare.
+  document.getElementById('capform').addEventListener('submit', async function(e){
+    e.preventDefault();
+    var email = document.getElementById('capemail').value.trim();
+    var msg = document.getElementById('capmsg');
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ msg.textContent='Enter a valid email.'; return; }
+    msg.textContent='Sending…';
+    try{
+      // TODO(cutover): point at the shared SUBSCRIBERS capture endpoint
+      // await fetch('https://<hub>/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,source:'energy-master'})});
+      await new Promise(r=>setTimeout(r,500));
+      msg.textContent='You’re in. Check your inbox — your meditations are on the way.';
+      document.getElementById('capemail').value='';
+    }catch(err){ msg.textContent='Something glitched — try again in a moment.'; }
+  });
+
+  // Private high-end inquiry — routes to Lawrence's private application inbox on cutover.
+  document.getElementById('inqform').addEventListener('submit', async function(e){
+    e.preventDefault();
+    var email = document.getElementById('inqemail').value.trim();
+    var msg = document.getElementById('inqmsg');
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ msg.textContent='Enter a valid email.'; return; }
+    msg.textContent='Sending…';
+    try{
+      // TODO(cutover): route to the private application inbox / high-ticket ladder
+      await new Promise(r=>setTimeout(r,500));
+      msg.textContent='Received. If it’s a fit, you’ll hear from us directly.';
+      document.getElementById('inqemail').value='';
+    }catch(err){ msg.textContent='Something glitched — try again in a moment.'; }
+  });
+</script>
+</body>
+</html>
